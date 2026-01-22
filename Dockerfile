@@ -31,4 +31,4 @@ COPY . .
 EXPOSE 7861
 
 # Default command
-CMD cp /etc/secrets/creds.json /app/creds.json && python web.py
+CMD mkdir -p /app/creds && cp /etc/secrets/creds.json /app/creds/creds.json && python web.py
