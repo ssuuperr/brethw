@@ -31,4 +31,4 @@ COPY . .
 EXPOSE 7861
 
 # Default command
-CMD ["sh", "-c", "mkdir -p creds && cp -f /etc/secrets/* creds/ && python web.py"]
+CMD ["sh", "-c", "mkdir -p creds && cp -f /etc/secrets/* creds/ && python import_data.py && python web.py"]
